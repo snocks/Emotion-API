@@ -24,7 +24,9 @@ function request(config , cb) {
 	var data = '{"url":"' + config.urlImage + '"}';
 	xhr.send(data);
 }
-document.getElementById("imageButton").onclick = function analyzFace(cb) {
+document.getElementById("imageButton").onclick = start;
+
+function analyzFace(cb) {
 	var imgUrl = randomImages(images);
 	document.getElementById('imgId').src = imgUrl;
 	request({
@@ -48,6 +50,19 @@ document.getElementById("imageButton").onclick = function analyzFace(cb) {
 			}	
 		});
 }
+function start (){
+	analyzFace(function(error,data){
+		if(data.mess === "Fantastic, Keep going in your Happiness :)"){
+			console.log("IFFFFF");
+			document.getElementById("message").innerHTML = data.mess;
+
+		}
+		else{
+			console.log("elssssssss");
+			playMusic();
+		}
+	});
+}
 
 function isHappy(data){
 	console.log("HAPPY");
@@ -61,13 +76,13 @@ window.onload = function(){
 	SC.initialize({ 
 		client_id: '3f91b1b7f705f1c92af593fc2d28503c' }); 
  };
-// document.getElementById("imageButton").onclick = function playMusic(cb){ 
-// 	SC.get('/tracks', { genres: 'happy' })
-// .then(function(tracks) {  
-// 	var random = Math.floor(Math.random() * 9); 
-// 	SC.oEmbed(tracks[random].uri, 
-// 		{element: document.getElementById("message")});
-// 		cb(undefined, tracks);  
-// 	 });
+			function playMusic(){ 
+			SC.get('/tracks', { genres: 'happy' })
+			.then(function(tracks) {  
+			var random = Math.floor(Math.random() * 9); 
+			SC.oEmbed(tracks[random].uri, 
+			{element: document.getElementById("message")});
+		  
+	 });
 	 
-// };
+};
