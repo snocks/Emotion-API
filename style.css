@@ -1,51 +1,81 @@
-body{
-  text-align: center;
-  background: #019587;
+body {
+    text-align: center;
+    background: #019587;
 }
 
-.header{
+.header {
     background-size: cover;
     margin-top: 10px;
-    height:500px;
+    height: 500px;
     text-align: center;
 }
-.header h3{
+
+.header h3 {
     font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-weight: 900;
     padding-top: 60px;
     color: #feea3b;
+    -webkit-animation-name: anim;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    /* Safari 4.0 - 8.0 */
+    animation-name: anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
 
-   -webkit-animation-name: anim; /* Safari 4.0 - 8.0 */
-   -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-   animation-name: anim;
-   animation-duration: 4s;
-   animation-iteration-count: infinite;
-}
+
 /* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes anim {
-    0%   {color:#fdc006; }
-    25%  {color:#e91d62; }
-    50%  {color:#fdc006; }
-    75%  {color:#8bc24a; }
-    100% {color:#fdc006; }
+    0% {
+        color: #fdc006;
+    }
+    25% {
+        color: #e91d62;
+    }
+    50% {
+        color: #fdc006;
+    }
+    75% {
+        color: #8bc24a;
+    }
+    100% {
+        color: #fdc006;
+    }
 }
+
 
 /* Standard syntax */
+
 @keyframes anim {
-    0%   {color:#fdc006; }
-    25%  {color:#e91d62; }
-    50%  {color:#fdc006; }
-    75%  {color:#8bc24a; }
-    100% {color:#fdc006; }
+    0% {
+        color: #fdc006;
+    }
+    25% {
+        color: #e91d62;
+    }
+    50% {
+        color: #fdc006;
+    }
+    75% {
+        color: #8bc24a;
+    }
+    100% {
+        color: #fdc006;
+    }
 }
-.header h2{
+
+.header h2 {
     font-size: 140%;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-weight: 900;
     color: #feea3b;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -55,13 +85,14 @@ ul {
     top: 0px;
 }
 
-li img{
+li img {
     max-width: 20%;
     height: auto;
-    padding:0px;
-    filter:brightness(110%);
+    padding: 0px;
+    filter: brightness(110%);
     float: left;
 }
+
 .imag {
     border: 8px solid;
     border-color: #fafafa;
@@ -74,53 +105,64 @@ li img{
 }
 
 .button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #e91d62;
-  border: none;
-  color: #fafafa;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  max-width: 50%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #e91d62;
+    border: none;
+    color: #fafafa;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    max-width: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 .button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 25px;
+    padding-right: 25px;
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
+    opacity: 1;
+    right: 0;
 }
 
-#footer{
+#message {
+    color: white;
+    font-size: 50px;
+}
+
+#message iframe {
+    height: 100px;
+    width: 500px;
+}
+
+#footer {
     width: 100%;
     height: 40px;
     text-align: center;
     margin-top: 90px;
 }
-#footer h4{
+
+#footer h4 {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 15px;
     font-weight: 900;
