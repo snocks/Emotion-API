@@ -18,7 +18,7 @@ test("'request' function should return Array", function(t) {
 
 test("'analyzFace' function should return the text 'we will make you so happy' if image was sad", function(t) {
     var done = t.async();
-    analyzFace('https://s-media-cache-ak0.pinimg.com/236x/00/ec/17/00ec171f5122823b091cf2064a0ea14a.jpg',function(error, data) {
+    analyzFace('https://s-media-cache-ak0.pinimg.com/236x/00/ec/17/00ec171f5122823b091cf2064a0ea14a.jpg', function(error, data) {
         t.equal(data.mess, 'we will make you so happy', 'Get right messege');
         done();
     });
