@@ -13,7 +13,7 @@ function request(config, cb) {
     var xhr = new XMLHttpRequest();
     xhr.open(config.method, config.url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Ocp-Apim-Subscription-Key", "668a9b304de3436d82815b549b0dab73");
+    xhr.setRequestHeader("Ocp-Apim-Subscription-Key", key.Emotion);
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var result = JSON.parse(xhr.responseText);
@@ -76,7 +76,7 @@ function randomImages(list) {
 
 window.onload = function() {
     SC.initialize({
-        client_id: '3f91b1b7f705f1c92af593fc2d28503c'
+        client_id: key.SC
     });
 };
 
