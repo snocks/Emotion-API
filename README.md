@@ -4,6 +4,8 @@
 
 This project is about using *two* APIs , the first API analayzing face emotion  by sending URL of image to the API , depending on the result if he was happy we write a motivation message to him but if he was sad we call the second API which is sound cloud API and play happy music.
 
+### Note: You should have a flash player in your browser.
+
 ## User Stories:
  - when the user open the site , he should see the button.
  - when the user click on the button, random image will appear.
