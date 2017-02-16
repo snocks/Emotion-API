@@ -26,7 +26,7 @@ To use this API you should sign up in Sound-Cloud and register for a new app to 
 
 To run the code you need to create a key.js file. Inside the file create a variable key.
 ```js
-var config = {
+var key = {
 Emotion API: '<key>',
 Sound-cloud: '<key>',
 };
