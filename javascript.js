@@ -55,11 +55,9 @@ function analyzFace(cb) {
 function start() {
     analyzFace(function(error, data) {
         if (data.mess === "Fantastic, Keep going in your Happiness :)") {
-            console.log("IFFFFF");
             document.getElementById("message").innerHTML = data.mess;
 
         } else {
-            console.log("elssssssss");
             playMusic();
         }
     });
@@ -85,7 +83,6 @@ function playMusic() {
         .then(function(tracks) {
             var random = Math.floor(Math.random() * 9);
             SC.oEmbed(tracks[random].uri, { element: document.getElementById("message") });
-
         });
 
 };
