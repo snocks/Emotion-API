@@ -24,10 +24,9 @@ To use this API you should sign up in Sound-Cloud and register for a new app to 
 
 ## run
 
-To run the code you need to create a key.js file. Inside the file create a variable key.
+To run the code you need to create a config.js file. Inside the file create a variable key.
 ```js
 var key = {
 Emotion: '<key>',
 SC: '<key>',
-};
-```
+}
