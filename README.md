@@ -19,3 +19,13 @@ To use this API you should sign up in Microsoft and subscribe in this API to get
 This API is from Sound-Cloud [link](https://developers.soundcloud.com/docs/api/guide).
 By using this API we can stream a music or embed in our page and play it.
 To use this API you should sign up in Sound-Cloud and register for a new app to get the key.
+
+## run
+
+To run the code you need to create a key.js file. Inside the file create a variable key.
+```js
+var config = {
+TEXT_RAZOR_KEY: '<key>',
+NEWS_KEY: '<key>',
+};
+```
